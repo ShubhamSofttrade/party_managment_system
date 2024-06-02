@@ -70,9 +70,9 @@ export class PartyformComponent implements OnInit {
       email: ['abc@gmai.com'],
       remark: ['Test'],
       login_access: [true],
-      date_of_birth: [[null], Validators.required],
-      anniversary_date: [[null], Validators.required],
-      gstin: ['ABCD123', Validators.required],
+      date_of_birth: [, Validators.required],
+      anniversary_date: [, Validators.required],
+      gstin: [, Validators.required],
       pan_no: ['ABCD1234', Validators.required],
       apply_tds: [true, ],
       credit_limit: [123, Validators.required],
@@ -207,20 +207,22 @@ export class PartyformComponent implements OnInit {
   
       if(partydata.id >0){
         partydata.address = JSON.stringify(this.AdressData);
-        partydata.bank = JSON.stringify(this.BankData) ;
+        partydata.bank = JSON.stringify(this.BankData);
         this.loginService.PutPartyData(partydata.id,partydata).subscribe({
           next:(data)=>{
             console.log(data);
           },error:(error)=>{
             this.alerts.error(error.error.message)
           },complete:()=>{
-            this.toaster.showSuccess('Edited Succesfully')
+            this.toaster.showSuccess('Edited Succesfully');
+            this.goback('save');
+
             console.log("Edited Succesfully")
           }
         })
       }else{
         partydata.address = JSON.stringify(this.AdressData);
-        partydata.bank = JSON.stringify(this.BankData) ;
+        partydata.bank = JSON.stringify(this.BankData );
         // partydata.address = this.AdressData;
         // partydata.bank_id = this.BankData;
         this.loginService.PostPartyData(partydata).subscribe({

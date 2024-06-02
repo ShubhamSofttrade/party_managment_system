@@ -38,7 +38,7 @@ export class partyData {
     this.credit_limit = data.credit_limit;
     this.img = data.img;
     this.address = data.address;
-    this.bank = data.bank_id;
+    this.bank = data.bank;
     this.bank_id = data.bank||"";
   }
 }

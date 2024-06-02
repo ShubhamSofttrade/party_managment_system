@@ -67,6 +67,7 @@ export class PartyalldataComponent implements OnInit {
       complete: () => {
         this.dataSource = new MatTableDataSource(this.PartyData);
         this.dataSource.paginator = this.paginator;
+        this.toaster.showInfo('List refreshed')
       },
     });
   }
@@ -84,7 +85,7 @@ openPartyForm(modal:any){
 
 // Medthod which closes the partyForm Modal
 closePartyForm(e:any){
-  if(e =='close'){
+  if(e !='close'){
     this.getallParty();
     this.PartyFormModal.close();
   }else{
