@@ -1,0 +1,23 @@
+.text-right{
+    text-align: right;
+}
+
+.bg-blue{
+    background-color: #7fdbff;
+}
+
+.errorMsg{
+    color: red;
+  }
+
+  .dialog-content {
+    max-height: 80vh; /* Adjust as needed */
+    overflow-y: auto;
+  }
+
+
+
+  .form-group.required .control-label:after {
+    content: " *";
+    color: red;
+  }

@@ -1,0 +1,124 @@
+<div class="content-wrapper">
+    <div class="container-full">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-lg-9 col-sm-9 col-md-9">
+                        <span class="h4 form-heading fw-bold">
+                            PartyList
+                        </span>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-2 text-right">
+                        <button mat-icon-button matTooltip="Add Party" (click)="AddData(partyForm)">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="LogOut"  (click)="Logout()">
+                            <mat-icon>exit_to_app</mat-icon>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="table-responsive">
+                        <table mat-table class="mat-elevation-z8 border table-hover border-dark"
+                            [dataSource]="dataSource">
+
+                            <ng-container matColumnDef="Action">
+                                <th mat-header-cell *matHeaderCellDef>Action</th>
+                                <td mat-cell *matCellDef="let item">
+                                    <button mat-icon-button matTooltip="Click For More Options"   [matMenuTriggerFor]="menu">
+                                        <div>
+                                            <mat-icon>more_horiz</mat-icon>
+
+                                        </div>
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item hittoaster matTooltip="Edit Party"  (click)="edit(item.id,partyForm)" >
+                                            <mat-icon>edit</mat-icon> Edit
+                                        </button>
+                                        <button mat-menu-item matTooltip="Delete Party"  (click)="DeleteParty(item.id)" >
+                                            <mat-icon>delete</mat-icon>Delete
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef>Name</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.name }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="panno">
+                                <th mat-header-cell *matHeaderCellDef>Pan No</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.pan_no }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="mobile_no">
+                                <th mat-header-cell *matHeaderCellDef>Mobile No</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.mobile_no }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="telephone_no">
+                                <th mat-header-cell *matHeaderCellDef>Telephone No</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.telephone_no }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="gstin">
+                                <th mat-header-cell *matHeaderCellDef>Gst No</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.gstin }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="email">
+                                <th mat-header-cell *matHeaderCellDef>Email</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.email }}
+                                </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="company_name">
+                                <th mat-header-cell *matHeaderCellDef>Company Name</th>
+                                <td mat-cell *matCellDef="let item">
+                                    {{ item.company_name }}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="credit_limit">
+                                <th class="text-right" mat-header-cell *matHeaderCellDef>credit limit</th>
+                                <td class="text-right" mat-cell *matCellDef="let item">
+                                    {{ item.credit_limit |number:'1.2-3' }}
+                                </td>
+                            </ng-container>
+
+                            <tr style="height: 2rem" mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"
+                                class="border-dark border bg-blue"></tr>
+                            <tr style="height: 2rem; width: 10%" mat-row *matRowDef="let row; columns: displayedColumns"
+                                class="mat-row "></tr>
+
+                        </table>
+                    </div>
+                        <mat-paginator [pageSizeOptions]="[25, 50, 100, 500]" showFirstLastButtons></mat-paginator>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #partyForm let-dialogRef>
+
+        <app-partyform [PatyEditData]="item" [addEditId]="addEditId" (close)="closePartyForm($event)" ></app-partyform>
+</ng-template>

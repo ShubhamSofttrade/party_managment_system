@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.toast-success {
+    background-color: #28a745 !important; /* Green background color */
+    color: #ffffff !important; /* White text color */
+  }
+.toast-Danger {
+    background-color: #e42c2c !important; /* Green background color */
+    color: #ffffff !important; /* White text color */
+  }
+.toast-Info {
+    background-color: #2c6ce4 !important; /* Green background color */
+    color: #ffffff !important; /* White text color */
+  }
+.toast-Warning {
+    background-color: #f4ff58 !important; /* Green background color */
+    color: #ffffff !important; /* White text color */
+  }

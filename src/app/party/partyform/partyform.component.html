@@ -1,0 +1,535 @@
+<div class="content-wrapper dialog-content">
+    <div class="container-full">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-md-4">
+                        <span class="h4 form-heading fw-bold">
+                            PartyForm
+                        </span>
+                    </div>
+                    <div class="col-lg-8 text-right">
+                        <span class="errorMsg">
+                            Fields with * are reqired 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="container">
+                            <form [formGroup]="partyDetailForm">
+
+
+                                <div class="row mt-2">
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label ">Name</label>
+                                        <input class="form-control form-control-sm" formControlName="name" type="text"
+                                            name="" id="">
+                                        <div *ngIf="
+                                                partyDetailForm.get('name')?.invalid &&
+                                                (partyDetailForm.get('name')?.dirty ||
+                                                partyDetailForm.get('name')?.touched)
+                                              ">
+                                            <div *ngIf="partyDetailForm.get('name')?.errors?.['required']">
+                                                <span class="errorMsg">Name cannot be blank</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Company Name</label>
+                                        <input type="text" formControlName="company_name"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                                partyDetailForm.get('company_name')?.invalid &&
+                                                (partyDetailForm.get('company_name')?.dirty ||
+                                                partyDetailForm.get('company_name')?.touched)
+                                              ">
+                                            <div *ngIf="partyDetailForm.get('company_name')?.errors?.['required']">
+                                                <span class="errorMsg">Company Name cannot be blank</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Mobile No</label>
+                                        <input type="text" formControlName="mobile_no"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('mobile_no')?.invalid &&
+                                            (partyDetailForm.get('mobile_no')?.dirty ||
+                                            partyDetailForm.get('mobile_no')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('mobile_no')?.errors?.['required']">
+                                            <span class="errorMsg">Mobile No  cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Credit Limit</label>
+                                        <input type="number" formControlName="credit_limit"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('credit_limit')?.invalid &&
+                                            (partyDetailForm.get('credit_limit')?.dirty ||
+                                            partyDetailForm.get('credit_limit')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('credit_limit')?.errors?.['required']">
+                                            <span class="errorMsg">Credit Limit cannot be blank</span>
+                                        </div>
+                                    </div>
+                                            
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Telephone No</label>
+                                        <input type="text" formControlName="telephone_no"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('telephone_no')?.invalid &&
+                                            (partyDetailForm.get('telephone_no')?.dirty ||
+                                            partyDetailForm.get('telephone_no')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('telephone_no')?.errors?.['required']">
+                                            <span class="errorMsg">telephone_no cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">whatsapp No</label>
+                                        <input type="text" formControlName="whatsapp_no"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('whatsapp_no')?.invalid &&
+                                            (partyDetailForm.get('whatsapp_no')?.dirty ||
+                                            partyDetailForm.get('whatsapp_no')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('whatsapp_no')?.errors?.['required']">
+                                            <span class="errorMsg">whatsapp_no cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4">
+                                        <label for="" class="control-label">email</label>
+                                        <input type="text" formControlName="email" class="form-control form-control-sm"
+                                            name="" id="">
+                                           
+                                    </div>
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Pan No</label>
+                                        <input type="text" formControlName="pan_no" class="form-control form-control-sm"
+                                            name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('pan_no')?.invalid &&
+                                            (partyDetailForm.get('pan_no')?.dirty ||
+                                            partyDetailForm.get('pan_no')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('pan_no')?.errors?.['required']">
+                                            <span class="errorMsg">pan_no cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-lg-3 form-group col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Date of Birth </label>
+                                        <input type="date" formControlName="date_of_birth"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('date_of_birth')?.invalid &&
+                                            (partyDetailForm.get('date_of_birth')?.dirty ||
+                                            partyDetailForm.get('date_of_birth')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('date_of_birth')?.errors?.['required']">
+                                            <span class="errorMsg">date_of_birth cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-4 col-md-4 required">
+                                        <label for="" class="control-label">Anniversary Date</label>
+                                        <input type="date" formControlName="anniversary_date"
+                                            class="form-control form-control-sm" name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('anniversary_date')?.invalid &&
+                                            (partyDetailForm.get('anniversary_date')?.dirty ||
+                                            partyDetailForm.get('anniversary_date')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('anniversary_date')?.errors?.['required']">
+                                            <span class="errorMsg">anniversary_date cannot be blank</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-2 form-group col-sm-4 col-md-4 required">
+
+                                        <label for="" class="control-label">GstIn</label>
+                                        <input type="text" formControlName="gstin" class="form-control form-control-sm"
+                                            name="" id="">
+                                            <div *ngIf="
+                                            partyDetailForm.get('gstin')?.invalid &&
+                                            (partyDetailForm.get('gstin')?.dirty ||
+                                            partyDetailForm.get('gstin')?.touched)
+                                          ">
+                                        <div *ngIf="partyDetailForm.get('gstin')?.errors?.['required']">
+                                            <span class="errorMsg">gstin cannot be blank</span>
+                                        </div>
+                                    </div>
+                                        <div *ngIf="gstinErr.length > 0" class="errorMsg">
+                                            {{gstinErr[0]}}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-4 col-md-4 mt-3 ">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                                formControlName="apply_tds">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Apply
+                                                tds</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-4 col-md-4 mt-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                                formControlName="login_access">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Login
+                                                Access</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+
+                                    <div class="col-lg-4 col-sm-6 col-md-6">
+                                        <label for="" class="control-label">Remark</label>
+                                        <input type="text" formControlName="remark" class="form-control form-control-sm"
+                                            name="" id="">
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-4 col-md-4">
+                                        <label for="" class="control-label">Image</label>
+                                        <input type="file" formControlName="img" class="form-control form-control-sm"
+                                            name="fileInput" id="fileInput">
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <!-- Bank Details table -->
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-4 col-md-4">
+                                            <span class="h4 form-heading fw-bold">
+                                                BankDetails
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 text-right">
+                                            <button class="btn btn-primary" matTooltip="Add BankDetails"
+                                                (click)="addBankDetails(BankDetails)">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="table-responsive">
+                                            <table
+                                                class="table table-responsive table-bordered col-lg-12 col-md-12 col-sm-12">
+                                                <thead class="bg-blue">
+                                                    <tr>
+                                                        <td>account_holder_name</td>
+                                                        <td>account_no</td>
+                                                        <td>bank_ifsc_code</td>
+                                                        <td>bank_name</td>
+                                                        <td>branch_name</td>
+                                                        <td>Action</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <ng-container *ngFor="let item of BankData">
+                                                        <tr>
+                                                            <td>
+                                                                {{item.account_holder_name}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.account_no}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.bank_ifsc_code}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.bank_name}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.branch_name}}
+
+                                                            </td>
+                                                            <td>
+                                                                <button mat-icon-button matTooltip="for more options" [matMenuTriggerFor]="menu">
+                                                                    <div>
+                                                                        <mat-icon>more_horiz</mat-icon>
+
+                                                                    </div>
+                                                                </button>
+                                                                <mat-menu #menu="matMenu">
+                                                                    <button mat-menu-item matTooltip="Edit BankDetails"
+                                                                        (click)="EditBank(item,BankDetails)">
+                                                                        Edit
+                                                                    </button>
+                                                                </mat-menu>
+                                                            </td>
+                                                        </tr>
+                                                    </ng-container>
+
+                                                </tbody>
+
+
+                                            </table>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-4 col-md-4">
+                                            <span class="h4 form-heading fw-bold">
+                                                Address
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 text-right">
+                                            <button class="btn btn-primary" matTooltip="Add Address" (click)="AddAdress(Address)">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-lg-12 table-responsive  ">
+                                            
+                                            <table class="table table-bordered">
+                                                <thead class="bg-blue">
+                                                    <tr>
+                                                        <td>address_line_1</td>
+                                                        <td>address_line_2</td>
+                                                        <td>city</td>
+                                                        <td>country</td>
+                                                        <td>pincode</td>
+                                                        <td>state</td>
+                                                        <td>Action</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <ng-container *ngFor="let item of AdressData">
+                                                        <tr>
+                                                            <td>
+                                                                {{item.address_line_1}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.address_line_2}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.city}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.country}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.pincode}}
+
+                                                            </td>
+                                                            <td>
+                                                                {{item.state}}
+
+                                                            </td>
+                                                            <td>
+                                                                <button mat-icon-button matTooltip="Edit Address" [matMenuTriggerFor]="menu">
+                                                                    <div>
+                                                                        <mat-icon>more_horiz</mat-icon>
+
+                                                                    </div>
+                                                                </button>
+                                                                <mat-menu #menu="matMenu" matTooltip="Edit Address">
+                                                                    <button mat-menu-item
+                                                                        (click)="EditAddress(item,Address)">
+                                                                        Edit
+                                                                    </button>
+                                                                </mat-menu>
+                                                            </td>
+                                                        </tr>
+                                                    </ng-container>
+
+                                                </tbody>
+
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-lg-12  text-center">
+                        <button class="btn btn-success mx-2" (click)="SubmitPartyData()">Submit</button>
+                        <button class="btn btn-danger" (click)="goback('close')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #BankDetails let-dialogRef>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-10 col-sm-10 col-md-10">
+                    <span class="h4 form-heading fw-bold">
+                        BankDetails
+                    </span>
+                </div>
+                <div class="col-lg-2">
+                    <button mat-icon-button (click)="closeBank('close')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="BankForm">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Account_holder_name</label>
+                            <input type="text" formControlName="account_holder_name" name="" id=""
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Account No</label>
+                            <input type="text" name="" id="" formControlName="account_no"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Bank_IFSC_Code</label>
+                            <input type="text" name="" id="" formControlName="bank_ifsc_code"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Bank Name</label>
+                            <input type="text" name="" id="" formControlName="bank_name"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Branch Name</label>
+                            <input type="text" name="" id="" formControlName="branch_name"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button (click)="SaveBankData()" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</ng-template>
+<ng-template #Address let-dialogRef>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-10 col-sm-10 col-md-10">
+                    <span class="h4 form-heading fw-bold">
+                        Address
+                    </span>
+                </div>
+                <div class="col-lg-2">
+                    <button mat-icon-button (click)="closeAdressModal('close')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="addressForm">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Address_line_1</label>
+                            <input type="text" formControlName="address_line_1" name="" id=""
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">Address_line_2</label>
+                            <input type="text" name="" id="" formControlName="address_line_2"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">city</label>
+                            <input type="text" name="" id="" formControlName="city"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">country</label>
+                            <input type="text" name="" id="" formControlName="country"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">pincode</label>
+                            <input type="number" name="" id="" formControlName="pincode"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">State</label>
+                            <input type="text" name="" id="" formControlName="state"
+                                class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <button (click)="SaveAddress()" class="btn  btn-success">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</ng-template>
