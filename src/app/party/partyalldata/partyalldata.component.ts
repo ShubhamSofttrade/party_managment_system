@@ -101,6 +101,11 @@ closePartyForm(e:any){
     // this.router.navigate(['/party/partyForm']);
   }
 
+  Filter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toUpperCase();
+  }
+
 
 
   // Method which gets the data from api call and sends to partyForm for edit

@@ -3,11 +3,18 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-lg-9 col-sm-9 col-md-9">
+                    <div class="col-lg-3 col-sm-9 col-md-9">
                         <span class="h4 form-heading fw-bold">
                             PartyList
                         </span>
                     </div>
+                    <div class="col-lg-6 has-search">
+                        <span class="form-control-feedback">
+                          <i class="fa fa-search"></i>
+                        </span>
+                        <input class="inp Searchbar"  style="border: 1px solid rgb(231, 229, 229);" id="SearchInput" (keyup)="Filter($event)"
+                          placeholder="Search here....." #input />
+                      </div>
                     <div class="col-lg-3 col-md-2 col-sm-2 text-right">
                         <button mat-icon-button matTooltip="Add Party" (click)="AddData(partyForm)">
                             <mat-icon>add</mat-icon>

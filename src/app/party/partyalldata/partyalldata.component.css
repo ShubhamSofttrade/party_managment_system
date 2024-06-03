@@ -5,3 +5,35 @@
 .bg-blue{
     background-color: #7fdbff;
 }
+
+
+.Searchbar{
+    border-radius: 16px;
+    border: none;
+  }
+
+  .has-search .form-control {
+    padding-left: 4rem;
+  }
+  
+  
+  
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #dad5d5;
+    margin-left: 10px;
+  }
+  
+  .Searchbar{
+    padding-left: 3rem;
+    width: 100% !important;
+  }
+  
